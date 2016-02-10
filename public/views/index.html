@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="greyladyApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-date/0.0.11/date.js" charset="utf-8"></script>
+    <script src="js/services/snippetsApi.js" charset="utf-8"></script>
+    <script src="js/controllers/snippet.js" charset="utf-8"></script>
+      <script src="js/app.js" charset="utf-8"></script>
+  </head>
+  <body class="container">
+    <nav>
+      <h2 class="grey-lady">Welcome to the Grey Lady</h2>
+    </nav>
+    <div class="content-contaner" ng-controller="snippetsController">
+      <input ui-date ng-model="dateFrom" type="text" id="date-from" placeholder="Date From">
+      <input ui-date ng-model="dateTo" type="text" id="date-to" placeholder="Date To">
+      <input type="button" name="Submit" value="Submit" ng-click="getNews()">
+      <div id="content">
+        <ul>
+          <li ng-repeat="doc in docs">
+            <p>
+              {{ doc.snippet }}
+            </p>
+          </li>
+      </div>
+    </div>
+  </body>
+</html>
