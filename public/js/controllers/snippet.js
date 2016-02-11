@@ -15,27 +15,26 @@ ctrl.controller('snippetsController', ['$scope', 'snippetsApi', '$http', '$windo
 
   $scope.docs = [];
 
-$scope.getNews = function() {
-
+  $scope.getNews = function() {
     var fromDate = $scope.dateFrom.dateToYMD();
     var toDate = $scope.dateTo.dateToYMD();
-    debugger
-    snippetsApi.getAllSnippets( fromDate, toDate ).then(function( data ){
-      console.log(data);
-    });
-
+    snippetsApi.getAllSnippets( fromDate, toDate );
+  }
+  $scope.defaultNews = function(){
+    snippetsApi.getAllSnippets();
   }
 
-  function renderSnippet(){
-    $http.get(superKey).then(function(response){
-      var data = response.data;
-      $scope.docs = data;
-      console.log(response);
-    })
-  };
+  // function renderSnippet(){
+  //   $http.get(superKey).then(function(response){
+  //     var data = response.data;
+  //     $scope.docs = data;
+  //     console.log(response);
+  //   })
+  // };
 
   // function deleteSnippet(){
   //   $http.delete()
   // }
 
+  $scope.defaultNews();
 }]);

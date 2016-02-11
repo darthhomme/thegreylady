@@ -32,7 +32,10 @@
             </p>
 
             <p>
-              {{ doc.web_url }}
+              <a href='{{ doc.web_url }}'>{{ doc.headline.main }}</a>
+            </p>
+            <p>
+              {{ doc.pub_date }}
             </p>
           </li>
         </ol>
