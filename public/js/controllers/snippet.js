@@ -34,8 +34,8 @@ $scope.getNews = function() {
     })
   };
 
-  function deleteSnippet(){
-    $http.delete()
-  }
+  // function deleteSnippet(){
+  //   $http.delete()
+  // }
 
 }]);

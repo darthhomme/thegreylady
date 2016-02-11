@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js" charset="utf-8"></script>
@@ -19,16 +20,21 @@
       <h2 class="grey-lady">Welcome to the Grey Lady</h2>
     </nav>
     <div class="content-contaner" ng-controller="snippetsController">
-      <input ui-date ng-model="dateFrom" type="text" id="date-from" placeholder="Date From">
-      <input ui-date ng-model="dateTo" type="text" id="date-to" placeholder="Date To">
-      <input type="button" name="Submit" value="Submit" ng-click="getNews()">
+      <input ui-date ng-model="dateFrom" type="text" placeholder="Start Date" id="date-from">
+      <input ui-date ng-model="dateTo" type="text" placeholder="End Date" id="date-to">
+      <input type="button" name="Submit" value="Submit" ng-click="getNews()" class="get-news-button">
       <div id="content">
-        <ul>
+        <ol>
           <li ng-repeat="doc in docs">
             <p>
               {{ doc.snippet }}
             </p>
+
+            <p>
+              {{ doc.web_url }}
+            </p>
           </li>
+        </ol>
       </div>
     </div>
   </body>
