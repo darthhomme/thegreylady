@@ -22,11 +22,11 @@
     <div class="content-contaner" ng-controller="snippetsController">
       <input ui-date ng-model="dateFrom" type="text" placeholder="Start Date" id="date-from">
       <input ui-date ng-model="dateTo" type="text" placeholder="End Date" id="date-to">
-      <input type="text" ng-model="q" value="" placeholder="Filter" class="filter-box">
+      <!-- <input type="text" ng-model="q" value="" placeholder="Filter" class="filter-box"> -->
       <input type="button" name="Submit" value="Submit" ng-click="getNews()" class="get-news-button">
       <div id="content">
         <ol>
-          <li ng-repeat="doc in docs | filter:q">
+          <li ng-repeat="doc in docs">
             <p>
               {{ doc.snippet }}
             </p>
