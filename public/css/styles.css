@@ -1,5 +1,5 @@
 body{
-  font-family: 'Lobster', Helvetica, sans-serif;
+  font-family: 'Montserrat', Helvetica, sans-serif;
   color: #000080;
   background-color: #a5adb0;
   background-image: url('http://www.technocrazed.com/wp-content/uploads/2015/12/New-York-Wallpaper-Background-1.jpg');
@@ -13,8 +13,8 @@ nav{
   text-align: center;
 }
 #content{
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
 }
-/*li{
-  list-style: none;
-}*/
+.col-md-6{
+  margin-bottom: 5px;
+}
