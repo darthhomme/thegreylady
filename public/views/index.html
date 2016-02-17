@@ -22,12 +22,18 @@
     <div class="content-container" ng-controller="snippetsController">
       <input ui-date ng-model="dateFrom" type="text" placeholder="Start Date" id="date-from">
       <input ui-date ng-model="dateTo" type="text" placeholder="End Date" id="date-to">
-      <!-- <input type="text" ng-model="q" value="" placeholder="Filter" class="filter-box"> -->
+      <!-- <input type="text" ng-model="q" value="" placeholder="Filter" class="filter-box">
+      <input ng-model="" type="text" placeholder="Pick a " -->
+
       <input type="button" name="Submit" value="Submit" ng-click="getNews()" class="get-news-button">
       <div class="row">
         <div class="col-md-6" ng-repeat="doc in docs">
-          <a class="embedly-card" href="{{ doc.web_url }}">{{ doc.headline.main }}</a>
-          <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+          <!-- <a class="embedly-card" href="{{ doc.web_url }}">{{ doc.headline.main }}</a>
+          <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script> -->
+
+
+          <blockquote class="embedly-card" data-card-key="1d0d02e4b53e4fd8b084ed139935bb11" data-card-chrome="0"><h4><a href="{{ doc.web_url }}">{{ doc.headline.main }}</a></h4><p>{{ doc.lead_paragraph }}</p></blockquote>
+<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 
         </div>
       </div>

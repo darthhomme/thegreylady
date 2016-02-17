@@ -3,8 +3,6 @@ api.factory('snippetsApi', ['$http', function($http){
 
   console.log("hello");
 
-  // api.nytimes.com/svc/search/v2/articlesearch.jsonp?callback=svc_search_v2_articlesearch&begin_date=20160201&end_date=20160202&hl=true&api-key=62bd71e38ae6689ade861f7d1976e48f%3A6%3A74251473
-
   var baseUrl = 'http://api.nytimes.com/svc/search/v2/articlesearch.jsonp?callback=svc_search_v2_articlesearch&sort=newest';
   var myKey = '62bd71e38ae6689ade861f7d1976e48f:6:74251473'
 
