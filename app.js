@@ -1,9 +1,6 @@
 var express = require('express');
 var app = express();
-var dotenv = require('dotenv');
-dotenv.load();
-//
-// mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/someweirdthing')
+
 
 app.use(express.static('./public'));
 
