@@ -13,3 +13,7 @@ An Example of the New York Times Articles Search API, which we will be using to 
 &end_date=20160202&hl=true&api-key=62bd71e38ae6689ade861f7d1976e48f:6:74251473'
 
 Notice the begin_date and end_date. We will use the controller $scope to control how these dates get put into the URL in order to make an $http.jsonp to the API.
+
+<img src="http://bit.ly/1PRNeuQ"/>
+
+<img src="http://bit.ly/20FhE8D"/>
