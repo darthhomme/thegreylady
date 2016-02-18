@@ -14,6 +14,12 @@ An Example of the New York Times Articles Search API, which we will be using to 
 
 Notice the begin_date and end_date. We will use the controller $scope to control how these dates get put into the URL in order to make an $http.jsonp to the API.
 
+DEFAULT PAGE
+
 <img src="http://bit.ly/1PRNeuQ"/>
+
+
+Notice the use of the calendar. That's a feature of the Angular UI that I borrowed from a CDN link.
+
 
 <img src="http://bit.ly/20FhE8D"/>
